@@ -1,40 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Memo Agility Interview
 
-## Getting Started
+This interview consists of two problems, but you are only required to solve one of them.
 
-First, run the development server:
+Moreover, it is not required to complete all requirements, as the focus is on understanding your thought process, so do voice out your thought process while doing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+PS: UI is not the focus here, rather the functionality is the focus. However, feel free to improve when you're done.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Problem 1: Authentication & Authorization
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This problem would focus on authentication logics.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Referring to `src/pages/index.tsx`, there is a login form, and `src/pages/api/login.ts` has the API implemented. 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Requirements:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- The page `src/pages/protected.tsx` should only be accessed by logged in user
+- Implement a logout function
+- Bonus: Implement another page, `/guarded` where only authorized users can access.
+- Bonus2: Implement a Splash screen while loading.
 
-## Learn More
+## Problem 2: Product Pagination
 
-To learn more about Next.js, take a look at the following resources:
+This problem focuses on the pagination of the product.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Read `src/pages/api/products.ts` to understand the response structure and what is being expected as URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Requirements:
 
-## Deploy on Vercel
+- Implement a product listing page with pagination
+- Bonus1: Implements name search
+- Bonus2: Implements Category filter (Also requires you to fetch categories from backend)
+- Super Bonus: Implements cart function
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Note: Feel free to use any library to implement the functionalities or speed up your development.
+
+PS: You're free to use Google, but ChatGPT should not be used.
